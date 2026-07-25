@@ -1,8 +1,8 @@
 const POINTS = [
-  'Our crane operators are trained and experienced',
-  'All cranes are well maintained and checked regularly',
-  'Call us anytime — we will get back to you quickly',
-  'We tell you the price upfront — no hidden charges',
+  'Our drivers and crane operators have good experience',
+  'All our cranes are in good condition',
+  'Call us anytime — we will reply fast',
+  'We tell you the exact price first — no hidden charges',
 ]
 
 const STATS = [

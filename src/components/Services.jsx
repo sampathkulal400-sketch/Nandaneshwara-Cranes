@@ -1,23 +1,23 @@
 const SERVICES = [
   {
-    title: 'Building & Construction',
-    desc: 'We bring the crane to your construction site — for houses, buildings, and any other construction work in Puttur area.',
+    title: 'House & Building Work',
+    desc: 'We bring the crane to your site for house construction, building work, and any other construction.',
   },
   {
     title: 'Heavy Lifting',
-    desc: 'Need to lift something very heavy? We can lift big machines, heavy materials, and other large items safely.',
+    desc: 'Need to lift heavy items? We can lift big machines, heavy materials, and other big items safely.',
   },
   {
     title: 'Loading & Unloading',
-    desc: 'We help load and unload heavy goods at your site, yard, or workplace.',
+    desc: 'We help you to load and unload heavy goods at your site or factory.',
   },
   {
-    title: 'Pick and Carry',
-    desc: 'We pick up heavy items from one place and carry them to another — even in tight or small spaces.',
+    title: 'Pick and Carry (Shifting)',
+    desc: 'We pick up heavy items from one place and shift them to another place.',
   },
   {
-    title: 'Urgent Work',
-    desc: 'If you need a crane urgently, just call us. We will try to come as soon as possible.',
+    title: 'Emergency Work',
+    desc: 'If you need a crane urgently, just call us. We will try to come as fast as we can.',
   },
 ]
 

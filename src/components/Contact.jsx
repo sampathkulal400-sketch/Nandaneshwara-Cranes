@@ -83,10 +83,10 @@ export default function Contact() {
 
           {/* Left — contact info */}
           <div className="reveal" style={{ display:'flex', flexDirection:'column', gap:'.8rem' }}>
-            <CARD icon="📞" title="+91 72598 71285" sub="Call us for availability and quotes" href="tel:+917259871285" />
-            <CARD icon="💬" title="WhatsApp Chat" sub="wa.me/917259871285"
+            <CARD icon="📞" title="+91 72598 71285" sub="Call us to book a crane" href="tel:+917259871285" />
+            <CARD icon="💬" title="WhatsApp Chat" sub="Send WhatsApp message"
               href={`${WA}?text=Hello%2C%20I%20need%20crane%20service`} green />
-            <CARD icon="📍" title="Puttur" sub="We serve Puttur and nearby areas" />
+            <CARD icon="📍" title="Puttur" sub="We serve Puttur and nearby places" />
 
             {/* Area note */}
             <div style={{
@@ -95,10 +95,10 @@ export default function Contact() {
               borderRadius:12, padding:'1rem 1.2rem',
               marginTop:'.2rem',
             }}>
-              <p style={{ color:'#d8dce8', fontWeight:600, fontSize:'.85rem', marginBottom:4 }}>Service Area</p>
+              <p style={{ color:'#d8dce8', fontWeight:600, fontSize:'.85rem', marginBottom:4 }}>Our Area</p>
               <p style={{ color:'#6b7585', fontSize:'.8rem', lineHeight:1.65 }}>
-                We serve Puttur and the surrounding areas only.
-                Please call us to confirm availability for your location.
+                We only work in Puttur and nearby places.
+                Please call us to check if we can come to your place.
               </p>
             </div>
           </div>
@@ -113,7 +113,7 @@ export default function Contact() {
               Send a Message
             </h3>
             <p style={{ color:'#6b7585', fontSize:'.8rem', marginBottom:'1.4rem' }}>
-              Fill the form and we'll respond via WhatsApp or phone call.
+              Fill this form and we will call or WhatsApp you back.
             </p>
 
             <form onSubmit={send} style={{ display:'flex', flexDirection:'column', gap:'.85rem' }}>
@@ -129,21 +129,21 @@ export default function Contact() {
                 </div>
               ))}
               <div>
-                <label style={{ display:'block', color:'#6b7585', fontSize:'.76rem', fontWeight:500, marginBottom:5 }}>Service Needed</label>
+                <label style={{ display:'block', color:'#6b7585', fontSize:'.76rem', fontWeight:500, marginBottom:5 }}>What Work You Need</label>
                 <select name="service" value={f.service} onChange={set}
                   style={{ ...inp, cursor:'pointer', colorScheme:'dark' }}>
                   <option value="">Select...</option>
-                  <option>Building &amp; Construction</option>
+                  <option>House &amp; Building Work</option>
                   <option>Heavy Lifting</option>
                   <option>Loading &amp; Unloading</option>
-                  <option>Pick and Carry</option>
-                  <option>Urgent Work</option>
+                  <option>Pick and Carry (Shifting)</option>
+                  <option>Emergency Work</option>
                 </select>
               </div>
               <div>
                 <label style={{ display:'block', color:'#6b7585', fontSize:'.76rem', fontWeight:500, marginBottom:5 }}>Message (optional)</label>
                 <textarea name="msg" value={f.msg} onChange={set} rows={3}
-                  placeholder="Describe your requirement..."
+                  placeholder="Tell us what you need..."
                   style={{ ...inp, resize:'vertical' }} onFocus={focus} onBlur={blur} />
               </div>
               <button type="submit"

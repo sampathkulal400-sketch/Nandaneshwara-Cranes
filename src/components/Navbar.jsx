@@ -9,122 +9,109 @@ const LINKS = [
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
-  const [open, setOpen]         = useState(false)
+  const [open, setOpen] = useState(false)
 
   useEffect(() => {
-    const fn = () => setScrolled(window.scrollY > 50)
-    window.addEventListener('scroll', fn, { passive:true })
-    return () => window.removeEventListener('scroll', fn)
+    const handleScroll = () => setScrolled(window.scrollY > 20)
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
   return (
-    <>
-      <nav style={{
-        position:'fixed', top:0, left:0, right:0, zIndex:50,
-        height:62,
-        display:'flex', alignItems:'center', justifyContent:'space-between',
-        padding:'0 1.25rem',
-        background: scrolled ? 'rgba(7,9,14,.97)' : 'rgba(7,9,14,.55)',
-        backdropFilter:'blur(16px)',
-        borderBottom:'1px solid rgba(240,165,0,.1)',
-        transition:'background .3s',
+    <nav style={{
+      position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100,
+      transition: 'all 0.3s ease',
+      borderBottom: scrolled ? '1px solid rgba(255,255,255,0.06)' : '1px solid transparent',
+    }} className={scrolled ? 'glass' : ''}>
+      <div style={{
+        maxWidth: 1200, margin: '0 auto',
+        padding: scrolled ? '0.8rem 1.25rem' : '1.2rem 1.25rem',
+        display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+        transition: 'padding 0.3s ease',
       }}>
-        {/* Brand */}
-        <a href="#home" onClick={() => setOpen(false)} style={{ textDecoration:'none' }}>
-          <p className="font-display" style={{
-            color:'#f0a500', fontWeight:900,
-            fontSize:'clamp(.85rem,3.5vw,.98rem)',
-            letterSpacing:'.01em', lineHeight:1.2,
-          }}>Nandaneshwara Cranes</p>
-          <p style={{ color:'#6b7585', fontSize:'.6rem', textTransform:'uppercase', letterSpacing:'.1em' }}>
-            Puttur
+        {/* Logo */}
+        <a href="#home" style={{ textDecoration: 'none' }} onClick={() => setOpen(false)}>
+          <p className="font-display gold-text" style={{
+            margin: 0, fontWeight: 900, fontSize: '1.4rem',
+            letterSpacing: '-0.02em', lineHeight: 1.1,
+          }}>Nandaneshwara</p>
+          <p style={{
+            color: '#8b95a5', fontSize: '0.65rem',
+            textTransform: 'uppercase', letterSpacing: '0.15em',
+            marginTop: 2,
+          }}>
+            Crane Services
           </p>
         </a>
 
-        {/* Desktop nav */}
-        <ul style={{ display:'flex', gap:'1.6rem', listStyle:'none', margin:0, padding:0 }}
-          className="hidden md:flex">
+        {/* Desktop Links */}
+        <div className="hidden md:flex" style={{ gap: '2rem', alignItems: 'center' }}>
           {LINKS.map(l => (
-            <li key={l.href}>
-              <a href={l.href} style={{ color:'#6b7585', textDecoration:'none', fontSize:'.85rem', fontWeight:500, transition:'color .2s' }}
-                onMouseEnter={e=>e.target.style.color='#f0a500'}
-                onMouseLeave={e=>e.target.style.color='#6b7585'}>
-                {l.label}
-              </a>
-            </li>
+            <a key={l.href} href={l.href} style={{
+              color: '#e2e8f0', textDecoration: 'none',
+              fontSize: '0.9rem', fontWeight: 500,
+              transition: 'color 0.2s ease',
+            }}
+            onMouseEnter={e => e.target.style.color = '#f0a500'}
+            onMouseLeave={e => e.target.style.color = '#e2e8f0'}>
+              {l.label}
+            </a>
           ))}
-        </ul>
-
-        {/* Desktop CTA */}
-        <a href="tel:+917259871285" className="hidden md:block"
-          style={{
-            background:'linear-gradient(135deg,#f0a500,#ffc840)',
-            color:'#000', fontWeight:700, fontSize:'.84rem',
-            padding:'8px 20px', borderRadius:50,
-            textDecoration:'none',
-          }}>
-          Call Now
-        </a>
-
-        {/* Hamburger */}
-        <button onClick={()=>setOpen(o=>!o)} className="md:hidden"
-          style={{ background:'none', border:'none', cursor:'pointer', padding:8, display:'flex', flexDirection:'column', gap:5 }}
-          aria-label="Toggle menu">
-          {[0,1,2].map(i => (
-            <span key={i} style={{
-              display:'block', width:24, height:2,
-              background:'#f0a500', borderRadius:2, transition:'all .3s',
-              transform: open
-                ? (i===0 ? 'rotate(45deg) translateY(7px)' : i===2 ? 'rotate(-45deg) translateY(-7px)' : 'none')
-                : 'none',
-              opacity: open && i===1 ? 0 : 1,
-            }} />
-          ))}
-        </button>
-      </nav>
-
-      {/* Mobile drawer */}
-      <div style={{
-        position:'fixed', top:62, left:0, right:0, zIndex:49,
-        background:'rgba(7,9,14,.98)',
-        borderBottom:'1px solid rgba(240,165,0,.08)',
-        padding: open ? '1.4rem 1.25rem 1.8rem' : '0 1.25rem',
-        maxHeight: open ? 480 : 0,
-        overflow:'hidden',
-        transition:'max-height .35s ease, padding .35s ease',
-      }}>
-        {LINKS.map(l => (
-          <a key={l.href} href={l.href} onClick={()=>setOpen(false)}
-            style={{
-              display:'block', color:'#d8dce8', textDecoration:'none',
-              fontWeight:500, padding:'.9rem 0', fontSize:'.98rem',
-              borderBottom:'1px solid rgba(255,255,255,.05)',
-            }}>
-            {l.label}
+          <a href="tel:+917259871285" style={{
+            background: 'linear-gradient(135deg, #f0a500, #ffc840)',
+            color: '#000', fontWeight: 700, padding: '10px 24px',
+            borderRadius: 50, textDecoration: 'none', fontSize: '0.9rem',
+            boxShadow: '0 4px 14px rgba(240,165,0,0.3)',
+            transition: 'transform 0.2s',
+          }}
+          onMouseEnter={e => e.target.style.transform = 'scale(1.05)'}
+          onMouseLeave={e => e.target.style.transform = 'none'}>
+            Call Now
           </a>
-        ))}
-        <a href="tel:+917259871285" onClick={()=>setOpen(false)}
-          style={{
-            display:'block', textAlign:'center',
-            marginTop:'1.2rem',
-            background:'linear-gradient(135deg,#f0a500,#ffc840)',
-            color:'#000', fontWeight:700, fontSize:'1rem',
-            padding:'14px', borderRadius:50, textDecoration:'none',
-          }}>
-          📞 +91 72598 71285
-        </a>
-        <a href="https://wa.me/917259871285?text=Hello%2C%20I%20need%20crane%20service%20from%20Nandaneshwara%20Cranes%20Puttur"
-          target="_blank" rel="noreferrer" onClick={()=>setOpen(false)}
-          style={{
-            display:'block', textAlign:'center',
-            marginTop:'.6rem',
-            background:'#25D366',
-            color:'#fff', fontWeight:700, fontSize:'1rem',
-            padding:'14px', borderRadius:50, textDecoration:'none',
-          }}>
-          💬 WhatsApp Us
-        </a>
+        </div>
+
+        {/* Mobile Toggle */}
+        <button className="md:hidden" onClick={() => setOpen(!open)} style={{
+          background: 'none', border: 'none', color: '#e2e8f0',
+          cursor: 'pointer', padding: '0.5rem',
+        }}>
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+            {open ? (
+              <path d="M18 6L6 18M6 6l12 12" />
+            ) : (
+              <path d="M4 6h16M4 12h16M4 18h16" />
+            )}
+          </svg>
+        </button>
       </div>
-    </>
+
+      {/* Mobile Menu Dropdown */}
+      <div className="md:hidden glass" style={{
+        position: 'absolute', top: '100%', left: 0, right: 0,
+        overflow: 'hidden',
+        transition: 'max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
+        maxHeight: open ? 400 : 0,
+        borderBottom: open ? '1px solid rgba(255,255,255,0.06)' : 'none',
+      }}>
+        <div style={{ display: 'flex', flexDirection: 'column', padding: '1rem 1.25rem' }}>
+          {LINKS.map(l => (
+            <a key={l.href} href={l.href} onClick={() => setOpen(false)} style={{
+              color: '#e2e8f0', textDecoration: 'none',
+              fontSize: '1.1rem', fontWeight: 600,
+              padding: '1rem 0', borderBottom: '1px solid rgba(255,255,255,0.05)',
+            }}>
+              {l.label}
+            </a>
+          ))}
+          <a href="tel:+917259871285" style={{
+            color: '#f0a500', textDecoration: 'none',
+            fontSize: '1.1rem', fontWeight: 700,
+            padding: '1.25rem 0 0.5rem',
+          }}>
+            📞 +91 72598 71285
+          </a>
+        </div>
+      </div>
+    </nav>
   )
 }

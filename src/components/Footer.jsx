@@ -22,7 +22,7 @@ export default function Footer() {
         </div>
 
         <nav style={{ display:'flex', flexWrap:'wrap', gap:'1.2rem' }}>
-          {[['#about','About'],['#fleet','Fleet'],['#services','Services'],['#contact','Contact']].map(([h,l]) => (
+          {[['#about','About'],['#fleet','Cranes'],['#services','Services'],['#contact','Contact']].map(([h,l]) => (
             <a key={h} href={h}
               style={{ color:'#6b7585', textDecoration:'none', fontSize:'.8rem', transition:'color .2s' }}
               onMouseEnter={e=>e.target.style.color='#f0a500'}
