@@ -2,7 +2,6 @@
 
 const IMGS = [
   { src: '/images/crane1.jpg', alt: 'Nandaneshwara crane at work' },
-  { src: '/images/crane2.jpg', alt: 'Nandaneshwara crane on site' },
   { src: '/images/crane3.jpg', alt: 'Nandaneshwara crane fleet' },
   { src: '/images/crane4.jpg', alt: 'Nandaneshwara cranes lineup' },
   { src: '/images/crane5.jpg', alt: 'Nandaneshwara crane in Puttur' },
