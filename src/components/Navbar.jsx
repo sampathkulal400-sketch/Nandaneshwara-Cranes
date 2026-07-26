@@ -21,8 +21,11 @@ export default function Navbar() {
     <nav style={{
       position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100,
       transition: 'all 0.3s ease',
+      background: scrolled ? 'rgba(10,12,16,0.98)' : 'transparent',
       borderBottom: scrolled ? '1px solid rgba(255,255,255,0.06)' : '1px solid transparent',
-    }} className={scrolled ? 'glass' : ''}>
+      backdropFilter: scrolled ? 'blur(10px)' : 'none',
+      WebkitBackdropFilter: scrolled ? 'blur(10px)' : 'none',
+    }}>
       <div style={{
         maxWidth: 1200, margin: '0 auto',
         padding: scrolled ? '0.8rem 1.25rem' : '1.2rem 1.25rem',

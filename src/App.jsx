@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
 import Fleet from './components/Fleet'
+import Video from './components/Video'
 import Services from './components/Services'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
@@ -28,6 +29,7 @@ export default function App() {
       <Hero />
       <About />
       <Fleet />
+      <Video />
       <Services />
       <Contact />
       <Footer />
