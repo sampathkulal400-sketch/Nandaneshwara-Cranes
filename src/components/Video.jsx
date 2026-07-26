@@ -39,30 +39,32 @@ export default function Video() {
       <div className="reveal d1" style={{
         display: 'flex',
         justifyContent: 'center',
-        padding: '0 1rem', // Slight padding on mobile so it doesn't touch the very edge, looks more premium
+        padding: '0 1rem', // Slight padding on mobile so it doesn't touch the very edge
       }}>
         <div style={{
-          width: '100%',
           maxWidth: 600, // Better size for portrait videos
-          background: '#000',
           borderRadius: 20, // Nice rounded corners everywhere
           overflow: 'hidden',
           border: '1px solid rgba(240,165,0,0.25)', // Gold border
           boxShadow: '0 15px 40px rgba(0,0,0,0.6), 0 0 20px rgba(240,165,0,0.1)', // Premium glow
           lineHeight: 0,
+          display: 'inline-flex', // Shrinks exactly to the video size so there are NO black bars
+          background: 'transparent',
         }}>
           <video
             ref={videoRef}
             src="/crane-video.mp4"
             controls
-            controlsList="nodownload" // Disables the download button
+            controlsList="nodownload noplaybackrate" // Disables download and playback speed options
+            disablePictureInPicture // Disables picture in picture option
             onContextMenu={(e) => e.preventDefault()} // Disables right-click to download
             playsInline
             preload="metadata"
             style={{
-              width: '100%',
-              maxHeight: '75vh', // Ensures it fits on any mobile screen without cutting off
-              objectFit: 'contain', // Keeps the full video visible
+              maxHeight: '72vh', // Fits perfectly on screen without scrolling
+              maxWidth: '100%',
+              width: 'auto', // Lets the video dictate the width naturally
+              height: 'auto',
               display: 'block',
               borderRadius: 20,
             }}
