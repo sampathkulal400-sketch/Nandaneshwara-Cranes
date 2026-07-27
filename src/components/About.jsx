@@ -48,7 +48,7 @@ export default function About() {
 
         <div className="reveal d2">
           <p style={{ color: '#6b7585', lineHeight: 1.8, marginBottom: '1rem', fontSize: '.92rem' }}>
-            S.N Crane Services has been working in Puttur for more than
+            S.N Crane Service has been working in Puttur for more than
             <strong style={{ color: '#d8dce8' }}> 10 years</strong>. We have
             <strong style={{ color: '#d8dce8' }}> 7 cranes</strong> and a good team
             who know the area and the work well.

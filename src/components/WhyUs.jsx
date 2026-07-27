@@ -12,7 +12,7 @@ export default function WhyUs() {
       <div className="text-center max-w-xl mx-auto mb-14">
         <span className="text-[#f5a800] text-xs font-bold tracking-[0.15em] uppercase">Our Commitment</span>
         <h2 className="reveal font-outfit font-black text-white mt-2 leading-tight" style={{ fontSize: 'clamp(1.8rem,4vw,2.6rem)' }}>
-          Why Choose <span className="gold-text">S.N Crane Services?</span>
+          Why Choose <span className="gold-text">S.N Crane Service?</span>
         </h2>
         <div className="w-14 h-[3px] gold-bg rounded-full mt-4 mx-auto" />
       </div>

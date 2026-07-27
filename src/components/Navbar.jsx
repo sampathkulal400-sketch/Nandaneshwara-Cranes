@@ -44,7 +44,7 @@ export default function Navbar() {
             textTransform: 'uppercase', letterSpacing: '0.14em',
             marginTop: 1,
           }}>
-            Services
+            Service
           </p>
         </a>
 

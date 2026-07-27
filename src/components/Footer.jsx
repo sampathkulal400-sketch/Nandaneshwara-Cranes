@@ -14,7 +14,7 @@ export default function Footer() {
       }}>
         <div>
           <p className="font-display" style={{ color:'#f0a500', fontWeight:900, fontSize:'.98rem', marginBottom:4 }}>
-            S.N Crane Services
+            S.N Crane Service
           </p>
           <p style={{ color:'#6b7585', fontSize:'.72rem', textTransform:'uppercase', letterSpacing:'.08em' }}>
             Puttur
@@ -34,7 +34,7 @@ export default function Footer() {
 
         <div style={{ textAlign: 'center', width: '100%', marginTop: '1rem', borderTop: '1px solid rgba(255,255,255,0.05)', paddingTop: '1rem' }}>
           <p style={{ color:'#6b7585', fontSize:'.72rem' }}>
-            © {new Date().getFullYear()} S.N Crane Services Puttur
+            © {new Date().getFullYear()} S.N Crane Service Puttur
           </p>
           <p style={{ color:'#6b7585', fontSize:'.72rem', marginTop: 4 }}>
             Built by <a href="https://optqvo.vercel.app/" target="_blank" rel="noreferrer" style={{ color: '#f0a500', textDecoration: 'none', fontWeight: 600 }}>Optqvo</a>
