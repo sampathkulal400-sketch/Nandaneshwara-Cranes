@@ -53,7 +53,7 @@ export default function Services() {
           gap: '.9rem',
         }}>
           {SERVICES.map((s, i) => (
-            <div key={s.title} className={`reveal d${(i % 3) + 1}`}
+            <div key={i} className={`reveal d${(i % 3) + 1}`}
               style={{
                 background: '#131720',
                 border: '1px solid rgba(240,165,0,.1)',
