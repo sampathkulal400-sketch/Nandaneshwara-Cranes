@@ -97,7 +97,7 @@ export default function Contact() {
               ].map((owner, i) => (
                 <div key={i} style={{
                   display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-                  padding: '14px 16px', background: '#131720',
+                  padding: '12px 10px', background: '#131720',
                   borderRadius: 14, border: '1px solid rgba(240,165,0,0.1)',
                   transition: 'transform 0.2s, box-shadow 0.2s',
                 }}
@@ -105,27 +105,26 @@ export default function Contact() {
                 onMouseLeave={e => { e.currentTarget.style.transform = 'none'; e.currentTarget.style.boxShadow = 'none'; e.currentTarget.style.borderColor = 'rgba(240,165,0,0.1)' }}>
                   
                   {/* Left: Avatar & Number */}
-                  <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
                     <div style={{
-                      width: 42, height: 42, borderRadius: '50%',
+                      width: 36, height: 36, borderRadius: '50%',
                       background: 'rgba(240,165,0,0.08)', color: '#f0a500',
                       display: 'flex', alignItems: 'center', justifyContent: 'center',
-                      fontSize: '1.1rem'
+                      fontSize: '1rem'
                     }}>
                       👤
                     </div>
                     <div>
-                      <p style={{ color: '#fff', fontSize: '1.05rem', fontWeight: 700, margin: 0, letterSpacing: '0.02em' }}>
+                      <p style={{ color: '#fff', fontSize: 'clamp(0.85rem, 4vw, 1rem)', fontWeight: 700, margin: 0, letterSpacing: '0.02em', whiteSpace: 'nowrap' }}>
                         +91 {owner.num}
                       </p>
                     </div>
                   </div>
 
-                  {/* Right: Action Buttons */}
-                  <div style={{ display: 'flex', gap: 8 }}>
+                  <div style={{ display: 'flex', gap: 6 }}>
                     {/* Call Button */}
                     <a href={`tel:+91${owner.val}`} title="Call" style={{
-                      width: 40, height: 40, borderRadius: '50%',
+                      width: 36, height: 36, borderRadius: '50%',
                       background: 'rgba(240,165,0,0.1)', color: '#f0a500',
                       display: 'flex', alignItems: 'center', justifyContent: 'center',
                       textDecoration: 'none', transition: 'background 0.2s'
@@ -139,7 +138,7 @@ export default function Contact() {
                     
                     {/* WhatsApp Button */}
                     <a href={`https://wa.me/91${owner.val}?text=Hello%2C%20I%20need%20crane%20service`} target="_blank" rel="noreferrer" title="WhatsApp" style={{
-                      width: 40, height: 40, borderRadius: '50%',
+                      width: 36, height: 36, borderRadius: '50%',
                       background: 'rgba(37,211,102,0.12)', color: '#25D366',
                       display: 'flex', alignItems: 'center', justifyContent: 'center',
                       textDecoration: 'none', transition: 'background 0.2s'
