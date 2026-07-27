@@ -1,42 +1,49 @@
-const SERVICES = [
-  {
-    title: 'House & Building Work',
-    desc: 'We bring the crane to your site for house construction, building work, and any other construction.',
-  },
-  {
-    title: 'Heavy Lifting',
-    desc: 'Need to lift heavy items? We can lift big machines, heavy materials, and other big items safely.',
-  },
-  {
-    title: 'Loading & Unloading',
-    desc: 'We help you to load and unload heavy goods at your site or factory.',
-  },
-  {
-    title: 'Pick and Carry (Shifting)',
-    desc: 'We pick up heavy items from one place and shift them to another place.',
-  },
-  {
-    title: 'Emergency Work',
-    desc: 'If you need a crane urgently, just call us. We will try to come as fast as we can.',
-  },
-]
+import { useLanguage } from '../LanguageContext'
 
 export default function Services() {
+  const { t } = useLanguage()
+
+  const SERVICES = [
+    {
+      title: t('s1_t'),
+      desc: t('s1_d'),
+    },
+    {
+      title: t('s2_t'),
+      desc: t('s2_d'),
+    },
+    {
+      title: t('s3_t'),
+      desc: t('s3_d'),
+    },
+    {
+      title: t('s4_t'),
+      desc: t('s4_d'),
+    },
+    {
+      title: t('s5_t'),
+      desc: t('s5_d'),
+    },
+  ]
+
   return (
     <section id="services" className="sp" style={{ background: '#0d1018' }}>
       <div style={{ maxWidth: 1080, margin: '0 auto' }}>
 
-        <div className="reveal" style={{ marginBottom: '2rem' }}>
-          <p className="sec-label">What We Do</p>
+        <div className="reveal" style={{ textAlign: 'center', marginBottom: '3rem' }}>
+          <p className="sec-label" style={{ margin: '0 auto 1rem' }}>{t('serv_label')}</p>
           <h2 className="font-display" style={{
-            color: '#fff', fontWeight: 900, lineHeight: 1.1,
-            fontSize: 'clamp(1.7rem, 6vw, 2.4rem)',
+            color: '#fff', fontWeight: 900,
+            fontSize: 'clamp(1.7rem, 6vw, 2.4rem)', lineHeight: 1.1,
+            marginBottom: '1rem',
           }}>
-            Our <span className="gold-text">Services</span>
+            {t('serv_title_1')}<span className="gold-text">{t('serv_title_2')}</span>
           </h2>
-          <div className="sec-divider" style={{ marginBottom: '.4rem' }} />
-          <p style={{ color: '#6b7585', fontSize: '.88rem', lineHeight: 1.7, maxWidth: 480 }}>
-            We work only in Puttur and nearby areas.
+          <p style={{
+            color: '#6b7585', maxWidth: 500, margin: '0 auto', fontSize: '0.92rem',
+            lineHeight: 1.6,
+          }}>
+            {t('serv_desc')}
           </p>
         </div>
 

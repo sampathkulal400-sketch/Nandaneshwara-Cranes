@@ -1,4 +1,7 @@
+import { useLanguage } from '../LanguageContext'
+
 export default function Footer() {
+  const { t } = useLanguage()
   return (
     <footer style={{
       background:'#060810',
@@ -22,7 +25,12 @@ export default function Footer() {
         </div>
 
         <nav style={{ display:'flex', flexWrap:'wrap', gap:'1.2rem' }}>
-          {[['#about','About'],['#fleet','Cranes'],['#services','Services'],['#contact','Contact']].map(([h,l]) => (
+          {[
+            ['#about', t('nav_about')],
+            ['#fleet', t('nav_fleet')],
+            ['#services', t('nav_services')],
+            ['#contact', t('nav_contact')]
+          ].map(([h,l]) => (
             <a key={h} href={h}
               style={{ color:'#6b7585', textDecoration:'none', fontSize:'.8rem', transition:'color .2s' }}
               onMouseEnter={e=>e.target.style.color='#f0a500'}

@@ -7,8 +7,11 @@ import Video from './components/Video'
 import Services from './components/Services'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
-import WaFab from './components/WaFab'
 import MobileCTA from './components/MobileCTA'
+import AIChatbot from './components/AIChatbot'
+import ContactModal from './components/ContactModal'
+import SplashScreen from './components/SplashScreen'
+import { LanguageProvider } from './LanguageContext'
 
 export default function App() {
   useEffect(() => {
@@ -24,17 +27,21 @@ export default function App() {
   }, [])
 
   return (
-    <div style={{ background: '#07090e', color: '#d8dce8', overflowX: 'hidden' }}>
-      <Navbar />
-      <Hero />
-      <About />
-      <Fleet />
-      <Video />
-      <Services />
-      <Contact />
-      <Footer />
-      <WaFab />
-      <MobileCTA />
-    </div>
+    <LanguageProvider>
+      <div style={{ background: '#07090e', color: '#d8dce8', overflowX: 'hidden' }}>
+        <SplashScreen />
+        <Navbar />
+        <Hero />
+        <About />
+        <Fleet />
+        <Video />
+        <Services />
+        <Contact />
+        <Footer />
+        <AIChatbot />
+        <MobileCTA />
+        <ContactModal />
+      </div>
+    </LanguageProvider>
   )
 }

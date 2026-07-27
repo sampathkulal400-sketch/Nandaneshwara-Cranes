@@ -21,7 +21,7 @@ export default function Video() {
   }, [])
 
   return (
-    <section id="video" style={{ background: '#0a0c10', paddingTop: '3.5rem', paddingBottom: '3.5rem' }}>
+    <section id="video" className="sp" style={{ background: '#0a0c10' }}>
 
       {/* Header */}
       <div className="reveal" style={{ padding: '0 1.25rem', maxWidth: 900, margin: '0 auto 1.8rem' }}>
