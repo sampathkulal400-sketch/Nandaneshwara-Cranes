@@ -1,5 +1,5 @@
 /* Fixed bottom bar — Call + WhatsApp — mobile only */
-const WA = "https://wa.me/917259871285?text=Hello%2C%20I%20need%20crane%20service%20from%20Nandaneshwara%20Cranes%20Puttur"
+const WA = "https://wa.me/917259871285?text=Hello%2C%20I%20need%20crane%20service%20from%20S.N%20Crane%20Services%20Puttur"
 
 export default function MobileCTA() {
   return (

@@ -18,7 +18,7 @@ export default function Contact() {
   const send = e => {
     e.preventDefault()
     const txt = encodeURIComponent(
-      `Hello Nandaneshwara Cranes,\n\nName: ${f.name}\nPhone: ${f.phone}\nService: ${f.service||'General Inquiry'}${f.msg?'\nMessage: '+f.msg:''}\n\nPlease call me back.`
+      `Hello S.N Crane Services,\n\nName: ${f.name}\nPhone: ${f.phone}\nService: ${f.service||'General Inquiry'}${f.msg?'\nMessage: '+f.msg:''}\n\nPlease call me back.`
     )
     window.open(`${WA}?text=${txt}`, '_blank')
   }

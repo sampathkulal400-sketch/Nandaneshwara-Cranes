@@ -37,13 +37,13 @@ export default function Navbar() {
           <p className="font-display gold-text" style={{
             margin: 0, fontWeight: 900, fontSize: '1.4rem',
             letterSpacing: '-0.02em', lineHeight: 1.1,
-          }}>Nandaneshwara</p>
+          }}>S.N Crane</p>
           <p style={{
             color: '#8b95a5', fontSize: '0.65rem',
             textTransform: 'uppercase', letterSpacing: '0.15em',
             marginTop: 2,
           }}>
-            Crane Services
+            Services
           </p>
         </a>
 

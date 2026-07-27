@@ -81,7 +81,7 @@ export default function Video() {
         padding: '0 1.25rem', lineHeight: 1.6,
         fontWeight: 500
       }}>
-        Nandaneshwara Cranes — Serving Puttur &amp; nearby areas
+        S.N Crane Services — Serving Puttur &amp; nearby areas
       </p>
 
     </section>

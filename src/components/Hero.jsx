@@ -5,7 +5,7 @@ const SLIDES = [
   { src: '/images/crane4.jpg', alt: 'Nandaneshwara cranes at Puttur' },
 ]
 
-const WA = 'https://wa.me/917259871285?text=Hello%2C%20I%20need%20crane%20service%20from%20Nandaneshwara%20Cranes%20Puttur'
+const WA = 'https://wa.me/917259871285?text=Hello%2C%20I%20need%20crane%20service%20from%20S.N%20Crane%20Services%20Puttur'
 
 export default function Hero() {
   const [cur, setCur] = useState(0)
@@ -78,8 +78,8 @@ export default function Hero() {
             lineHeight: 1.1, marginBottom: '1rem',
             letterSpacing: '-0.02em',
           }}>
-            Nandaneshwara<br />
-            <span className="gold-text">Crane Services</span>
+            S.N Crane<br />
+            <span className="gold-text">Services</span>
           </h1>
 
           <p style={{
