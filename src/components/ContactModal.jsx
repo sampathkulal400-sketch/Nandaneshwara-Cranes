@@ -71,7 +71,7 @@ export default function ContactModal() {
                   👤
                 </div>
                 <div>
-                  <p style={{ color: '#fff', fontSize: '1rem', fontWeight: 700, margin: 0, letterSpacing: '0.02em' }}>
+                  <p style={{ color: '#fff', fontSize: 'clamp(0.9rem, 4vw, 1rem)', fontWeight: 700, margin: 0, letterSpacing: '0.02em', whiteSpace: 'nowrap' }}>
                     +91 {owner.num}
                   </p>
                 </div>

@@ -35,14 +35,14 @@ export default function About() {
 
             {/* Stat pills */}
             <div className="reveal d2" style={{
-              display: 'flex', gap: '.7rem', flexWrap: 'wrap', marginBottom: '1.4rem',
+              display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '.7rem', marginBottom: '1.4rem', width: '100%', maxWidth: 400
             }}>
               {STATS.map(s => (
                 <div key={s.label} style={{
                   background: 'rgba(240,165,0,.08)',
                   border: '1px solid rgba(240,165,0,.22)',
-                  borderRadius: 12, padding: '.85rem 1.2rem',
-                  flex: '1 1 110px',
+                  borderRadius: 12, padding: '.85rem 0.5rem',
+                  display: 'flex', flexDirection: 'column', alignItems: 'center'
                 }}>
                   <p className="font-display" style={{
                     color: '#f0a500', fontWeight: 900,
