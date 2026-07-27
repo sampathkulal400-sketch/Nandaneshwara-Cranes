@@ -27,7 +27,7 @@ export default function Fleet() {
             <span className="gold-text">{t('fleet_title_2')}</span>
           </h2>
           <p className="reveal d2" style={{
-            color: '#6b7585', maxWidth: 500, margin: '0 auto', fontSize: '0.92rem',
+            color: '#94a3b8', maxWidth: 500, margin: '0 auto', fontSize: '0.95rem',
             lineHeight: 1.6,
           }}>
             {t('fleet_desc')}

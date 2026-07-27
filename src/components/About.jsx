@@ -54,10 +54,10 @@ export default function About() {
             </div>
 
             <div className="reveal d2" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-              <p style={{ color: '#6b7585', lineHeight: 1.8, marginBottom: '1rem', fontSize: '.92rem', maxWidth: 600 }}>
+              <p style={{ color: '#94a3b8', lineHeight: 1.8, marginBottom: '1rem', fontSize: '0.95rem', maxWidth: 600 }}>
                 {t('about_p1')}
               </p>
-              <p style={{ color: '#6b7585', lineHeight: 1.8, marginBottom: '2rem', fontSize: '.92rem', maxWidth: 600 }}>
+              <p style={{ color: '#94a3b8', lineHeight: 1.8, marginBottom: '2rem', fontSize: '0.95rem', maxWidth: 600 }}>
                 {t('about_p2')}
               </p>
             </div>
