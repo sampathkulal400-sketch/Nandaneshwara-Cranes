@@ -151,3 +151,22 @@ img { max-width: 100%; display: block; }
 
 /* ── Mobile touch target minimum ── */
 a, button { min-height: 48px; }
+
+/* ── Kannada Language Overrides ── */
+html[lang="kn"] body, 
+html[lang="kn"] p, 
+html[lang="kn"] h1, 
+html[lang="kn"] h2, 
+html[lang="kn"] h3, 
+html[lang="kn"] h4, 
+html[lang="kn"] li, 
+html[lang="kn"] a, 
+html[lang="kn"] span, 
+html[lang="kn"] button, 
+html[lang="kn"] div { 
+  line-height: 1.7 !important; 
+}
+
+html[lang="kn"] .font-display { 
+  line-height: 1.5 !important; 
+}

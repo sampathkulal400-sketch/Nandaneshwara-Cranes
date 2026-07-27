@@ -1,10 +1,14 @@
-import { createContext, useState, useContext } from 'react'
+import { createContext, useState, useContext, useEffect } from 'react'
 import { translations } from './translations'
 
 const LanguageContext = createContext()
 
 export function LanguageProvider({ children }) {
   const [lang, setLang] = useState('en') // 'en' or 'kn'
+
+  useEffect(() => {
+    document.documentElement.lang = lang;
+  }, [lang])
 
   const t = (key) => {
     return translations[lang][key] || translations['en'][key] || key
